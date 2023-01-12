@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form method="get" action="index.php">
+<form method="post" action="index.php">
         <input type="text" name ="prenom" placeholder="prenom"/>
         <input type="text" name="nom" placeholder="nom"/>
         <input type="text" name="âge" placeholder="âge"/>
@@ -20,13 +20,14 @@
 
 <?php
 
-if (isset($_GET["prenom"]) && isset($_GET["nom"]) && isset($_GET["âge"])) {
+if (isset($_POST["prenom"]) && isset($_POST["nom"]) && isset($_POST["âge"])) {
 
-$prenom = htmlspecialchars($_GET["prenom"]);
-$nom = htmlspecialchars($_GET["nom"]);
-$age = htmlspecialchars($_GET["âge"]);
+$prenom = htmlspecialchars($_POST["prenom"]);
+$nom = htmlspecialchars($_POST["nom"]);
+$age = htmlspecialchars($_POST["âge"]);
 
 }
+
 
 echo "<table border>
     <tr>

@@ -9,9 +9,9 @@
 <body>
 
 <form method="get" action="index.php">
-        <input type="text" name ="prenom" placeholder="prenom"/>
-        <input type="text" name="nom" placeholder="nom"/>
-        <input type="text" name="âge" placeholder="âge"/>
+        <input type="text" name ="Prénom" placeholder="Prénom"/>
+        <input type="text" name="Nom" placeholder="Nom"/>
+        <input type="text" name="Age" placeholder="Age"/>
         <input type="submit" value="Envoyer"/>
 </form>
 
@@ -20,31 +20,21 @@
 
 <?php
 
-if (isset($_GET["prenom"]) && isset($_GET["nom"]) && isset($_GET["âge"])) {
-
-$prenom = htmlspecialchars($_GET["prenom"]);
-$nom = htmlspecialchars($_GET["nom"]);
-$age = htmlspecialchars($_GET["âge"]);
-
-}
-
 echo "<table border>
     <tr>
         <th>Argument</th>
         <th>Valeur</th>
-    </tr>
-    <tr>
-        <td>prenom</td>
-        <td>$prenom</td>
-    </tr>
-    <tr>
-        <td>nom</td>
-        <td>$nom</td>
-    </tr>
-    <tr>
-        <td>âge</td>
-        <td>$age</td>
-    </tr>
-    </table>";
+    </tr>";
+    
+foreach ($_GET as $key => $value) {
+
+echo 
+    "<tr>
+        <td>$key</td>
+        <td>$value</td>
+    </tr>";
+}
+
+echo "</table>";
 
 ?>

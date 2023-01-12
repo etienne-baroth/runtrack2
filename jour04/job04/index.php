@@ -9,9 +9,9 @@
 <body>
 
 <form method="post" action="index.php">
-        <input type="text" name ="prenom" placeholder="prenom"/>
-        <input type="text" name="nom" placeholder="nom"/>
-        <input type="text" name="âge" placeholder="âge"/>
+        <input type="text" name ="prenom" placeholder="Prénom"/>
+        <input type="text" name="nom" placeholder="Nom"/>
+        <input type="text" name="âge" placeholder="Age"/>
         <input type="submit" value="Envoyer"/>
 </form>
 
@@ -20,32 +20,21 @@
 
 <?php
 
-if (isset($_POST["prenom"]) && isset($_POST["nom"]) && isset($_POST["âge"])) {
-
-$prenom = htmlspecialchars($_POST["prenom"]);
-$nom = htmlspecialchars($_POST["nom"]);
-$age = htmlspecialchars($_POST["âge"]);
-
-}
-
-
 echo "<table border>
     <tr>
         <th>Argument</th>
         <th>Valeur</th>
-    </tr>
-    <tr>
-        <td>prenom</td>
-        <td>$prenom</td>
-    </tr>
-    <tr>
-        <td>nom</td>
-        <td>$nom</td>
-    </tr>
-    <tr>
-        <td>âge</td>
-        <td>$age</td>
-    </tr>
-    </table>";
+    </tr>";
+    
+foreach ($_POST as $key => $value) {
+
+echo 
+    "<tr>
+        <td>$key</td>
+        <td>$value</td>
+    </tr>";
+}
+
+echo "</table>";
 
 ?>

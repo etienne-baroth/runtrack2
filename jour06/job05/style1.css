@@ -1,0 +1,41 @@
+html {
+    background-color: #9BB291;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 15%;
+    color: #774E24;
+}
+
+.inputForm {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto;
+    width: 50%;
+}
+
+input {
+    margin: 5px 0;
+    background-color: #774E24;
+    color: white;
+    padding: 2px;
+    font-family: 'Anton', sans-serif;
+}
+
+::placeholder {
+    color: white;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+
+select {
+    background-color: #774E24;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    border: 2px solid black;
+    font-family: 'Anton', sans-serif;
+}

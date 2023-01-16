@@ -1,0 +1,48 @@
+html {
+    background-color: #2B193D;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 15%;
+    color: #484D6D;
+    border: 2px solid #85FF9E;
+    padding: 8px;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px auto;
+    padding: 8px;
+    width: 30%;
+    border: 2px solid #85FF9E;
+}
+
+input {
+    margin: 5px 0;
+    background-color: #2C365E;
+    color: #85FF9E;
+    padding: 2px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #85FF9E;
+}
+
+::placeholder {
+    color: #85FF9E;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+select {
+    background-color: #2C365E;
+    color: #85FF9E;
+    text-align: center;
+    padding: 2px;
+    border: 1px solid black;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #85FF9E;
+}

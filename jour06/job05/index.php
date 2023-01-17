@@ -1,14 +1,14 @@
 <?php
 
-if($_GET["style"]=="style1.css") {
+    if(isset ($_GET["style"]) && $_GET["style"]=="style1.css") {
     ?><link rel="stylesheet" href="style1.css"><?php
     }
     
-    elseif($_GET["style"]=="style2.css") {
+    elseif(isset ($_GET["style"]) && $_GET["style"]=="style2.css") {
         ?><link rel="stylesheet" href="style2.css"><?php
     }
     
-    elseif($_GET["style"]=="style3.css") {
+    elseif(isset ($_GET["style"]) && $_GET["style"]=="style3.css") {
     ?><link rel="stylesheet" href="style3.css"><?php
     }
 

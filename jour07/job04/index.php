@@ -1,9 +1,24 @@
 <?php
 
 function calcule($a, $operation, $b) {
-    return ($a+$b);
+    if ($operation === "+") {
+        $resultat = ($a+$b);
+        return $resultat;
+    }
+    elseif ($operation === "-") {
+        $resultat = ($a-$b);
+        return $resultat;
+    }
+    elseif ($operation === "/") {
+        $resultat = ($a/$b);
+        return $resultat;
+    }
+    elseif ($operation === "*") {
+        $resultat = ($a*$b);
+        return $resultat;
+    }
 }
 
-$resultat = calcule(2, "+", 3);
+$result = calcule(2, "/", 3);
 
-echo $resultat;
+echo $result;

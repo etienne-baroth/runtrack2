@@ -10,7 +10,6 @@ if(isset($_SESSION["nbvisites"])) {
     if (isset($_GET["reset"])) {
         $_SESSION["nbvisites"] = 0;
         echo $_SESSION["nbvisites"];
-        unset ($_SESSION["nbvisites"]);
         session_destroy();
     }
 

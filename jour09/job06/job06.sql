@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2023 at 02:16 PM
+-- Generation Time: Jan 19, 2023 at 02:21 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -40,8 +40,9 @@ CREATE TABLE `etudiants` (
 -- Dumping data for table `etudiants`
 --
 
-INSERT INTO `etudiants` (`prenom`, `nom`, `naissance`) VALUES
-('Jessica', 'Soriano', '1995-09-08');
+INSERT INTO `etudiants` (`id`, `prenom`, `nom`, `naissance`, `sexe`, `email`) VALUES
+(5, 'Terry', 'Cristinelli', '2005-02-01', 'Homme', 'terry@laplateforme.io'),
+(7, 'Toto', 'Dupont', '2019-11-07', 'Homme', 'toto@laplateforme.io');
 
 --
 -- Indexes for dumped tables
@@ -70,4 +71,4 @@ COMMIT;
 
 
 -- Requête SQL
--- SELECT prenom, nom, naissance FROM etudiants WHERE sexe = 'Femme';
+-- SELECT * FROM etudiants WHERE prenom LIKE 'T%';
